@@ -41,7 +41,8 @@ int main(void) {
 }
 float mc_pi(int n)
 {
-float pi,x,y,z;
+float pi;
+  float x,y,z;
   int count=0;
   for(int i=0;i<n;i++)
   {
@@ -49,9 +50,10 @@ float pi,x,y,z;
     y=frandom();
     z=x*x+y*y;
     if (Z<=1)
-      count++;
+      count=count+1;
+    
   }
-  pi=(double)count/n*4;
+  pi=(double)(count*4)/n;
   return pi;
 }
 
